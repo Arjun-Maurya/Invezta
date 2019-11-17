@@ -1,0 +1,389 @@
+@import "_reset.scss";
+@import "_variable.scss";
+@import "_fonts.scss";
+
+body
+{
+	font-family: $regular-font;
+}
+.site
+{
+	overflow: hidden;
+}
+.container
+{
+	max-width: 1200px;
+	padding:0px 10px;
+	margin: auto;
+}
+.site-header
+{
+	background-color: #efefef;
+	box-shadow: 2px 2px 12px -1px #ccc;
+	.logo-wrapper 
+	{
+		display: flex;
+		align-items: center;
+		height: 100px;
+		justify-content: space-between;
+	}
+	.logo
+	{
+		background-image: url(../images/Invezta-Logo.png);
+		width: 232px;
+		height: 64px;
+		position: relative;
+
+		&:before
+		{
+			content: "\e805";
+			font-family: 'custom-fonts';
+			position: absolute;
+			font-size: 22px;
+			color: #bbbbbb;
+			left: -30px;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
+	.close
+	{
+		&:before
+		{
+			content: "\e807";
+			font-family: 'custom-fonts';
+			font-size: 30px;
+			color: #bbbbbb;
+			cursor: pointer;
+		}
+	}
+}
+
+.inv-equity 
+{
+	padding: 50px 0px;
+
+	.title
+	{
+		color: #595959;
+		text-align: center;
+
+		.txt-1 
+		{
+			display: block;
+			font-size: 35px;
+			letter-spacing: 2px;
+			font-family: $regular-font;
+		}
+	}
+	.icon
+	{
+		margin-right: 15px;
+		&:before
+		{
+			content: "\f156";
+			color: #b7b7b7;
+			font-family: 'custom-fonts';
+			font-size: 30px;
+		}
+		&.calender:before
+		{
+			content: "\e800";
+		}
+		&.target-amount {
+			border: 1px solid #b7b7b7;
+			width: 30px;
+			height: 30px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 50%;
+
+			&:before
+			{
+				font-size: 24px;
+			}
+		}
+	}
+	.equity-list
+	{
+		display: flex;
+		margin:50px 0px;
+
+		.equity-item
+		{
+			flex:1;
+			color: $default-color;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		.txt-1
+		{
+			display: block;
+			font-size: 32px;
+			line-height: 1;
+		}
+		.txt-2
+		{
+			font-size: 12px;
+		}
+	}
+	.inv-equity-body
+	{
+		display: flex;
+	}
+	.equity-graphics
+	{
+		flex-basis:25%;
+	}
+	.equity-info
+	{
+		flex-basis:75%;
+	}
+	.fund-item
+	{
+		border: 1px solid #e6e6e6;
+		margin: 15px 0px;
+		border-radius: 2px;
+		display: flex;
+		justify-content: space-between;
+
+
+		&:first-child
+		{
+			border-left: 4px solid $primary-color;
+		}
+		&:nth-child(2)
+		{
+			.fund-amount
+			{
+				background-color: #13bc9b;
+			}
+			.duration:before
+			{
+				background-color: #13bc9b;
+			}
+		}
+		&:nth-child(3)
+		{
+			margin-bottom: 5px;
+			.fund-amount
+			{
+				background-color: $secondary-color;
+			}
+			.duration:before
+			{
+				background-color: $secondary-color;
+			}
+		}
+	}
+	.fund-info
+	{
+		padding: 10px 20px;
+
+		.fund-title
+		{
+			color: $default-color;
+			font-family: $medium-font;
+			font-size: 18px;
+			margin-bottom: 8px;
+			line-height: 1.3;
+		}
+		.basic-info 
+		{
+			font-size: 12px;
+			color: #b7b7b7;
+		}
+		.duration
+		{
+			display: inline-block;
+			width: 150px;
+			position: relative;
+
+			&:before
+			{
+				content: "";
+				width: 10px;
+				height: 10px;
+				background-color: $primary-color;
+				display: inline-block;
+				border-radius: 50%;
+				margin-right: 10px;
+			}
+		}
+	}
+	.fund-amount
+	{
+		background-color: $primary-color;
+		color: #ffffff;
+		padding: 10px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 22px
+	}
+	.message 
+	{
+		font-size: 11px;
+		text-align: right;
+	}
+	.action
+	{
+		text-align: center;
+		margin: 20px 0px;
+		.inv-btn
+		{
+			background-color: #13d5b0;
+			border: none;
+			color: #ffffff;
+			font-size: 18px;
+			padding: 15px 20px;
+			cursor: pointer;
+		}
+	}
+	.equity-graphics
+	{
+		.graph-wrapper
+		{
+			width: 250px;
+			position: relative;
+		}
+		
+		.circle-wrap
+		{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			font-size: 30px;
+			text-align: center;
+		}
+		.circle-msg
+		{
+			font-size: 10px;
+		}
+		.fund-graph {
+			transform: rotate(90deg);
+		}
+		.circle-1
+		{
+			fill:none;
+			stroke: $secondary-color;
+			stroke-width: 1;
+		}
+		.circle-2 {
+			fill: none;
+			stroke: $primary-color;
+			stroke-dasharray: 100 100;
+			stroke-dashoffset: 100;
+			stroke-width: 1.3;
+			-webkit-transition: stroke-dashoffset 1s ease-in-out;
+			transition: stroke-dashoffset 1s ease-in-out;
+		}
+
+		.txt-1
+		{
+			display: block;
+			color: $primary-color;
+			margin-bottom: 15px;
+		}
+		.txt-2
+		{
+			display: block;
+			color: $secondary-color;
+		}
+	}
+}
+
+@media screen and (max-width: 767px)
+{
+	.site-header 
+	{
+		.logo-wrapper
+		{
+			height: 50px;
+		}
+		.logo
+		{
+			width: 120px;
+			position: relative;
+			height: 40px;
+			background-size: 100% auto;
+			background-repeat: no-repeat;
+			margin-left: 25px;
+		}
+	}
+	.inv-equity 
+	{
+		padding: 30px 0px;
+		.title 
+		{
+			.txt-1
+			{
+				font-size: 26px;
+			}
+			.txt-2
+			{
+				font-size: 12px;
+			}
+		}
+		.equity-list
+		{
+			margin: 30px 0px;
+			flex-wrap:wrap;
+			justify-content: center;
+
+			.equity-item
+			{
+				flex:unset;
+				flex-basis: 50%;
+				padding: 15px 0px;
+				border-bottom: 1px solid #ccc;
+			}
+			.txt-1
+			{
+				font-size: 22px;
+			}
+			.icon:before
+			{
+				font-size: 24px;
+			}
+		}
+		.inv-equity-body
+		{
+			flex-direction: column;
+		}
+		.equity-graphics 
+		{
+			.graph-wrapper
+			{
+				margin: auto;
+				width: 200px;
+			}
+			.circle-msg
+			{
+				display: block;
+				text-align: center;
+			}
+			.circle-wrap
+			{
+				font-size: 24px;
+			}
+		}
+		.fund-info 
+		{
+			.fund-title
+			{
+				font-size: 16px;
+			}
+
+		}
+		.fund-amount
+		{
+			font-size: 18px;
+		}
+		
+	}
+}
+

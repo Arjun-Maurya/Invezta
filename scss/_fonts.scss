@@ -1,0 +1,24 @@
+@font-face {
+	font-family: 'Helvetica';
+	src: url('../fonts/Helvetica.eot');
+	src: url('../fonts/Helvetica.eot') format('embedded-opentype'), url('../fonts/Helvetica.woff2') format('woff2'), url('../fonts/Helvetica.woff') format('woff'), url('../fonts/Helvetica.ttf') format('truetype'), url('../fonts/Helvetica.svg#Helvetica') format('svg');
+	
+}
+
+@font-face {
+	font-family: 'HelveticaNeueLTStdMd';
+	src: url('../fonts/HelveticaNeueLTStdMd.eot');
+	src: url('../fonts/HelveticaNeueLTStdMd.eot') format('embedded-opentype'), url('../fonts/HelveticaNeueLTStdMd.woff2') format('woff2'), url('../fonts/HelveticaNeueLTStdMd.woff') format('woff'), url('../fonts/HelveticaNeueLTStdMd.ttf') format('truetype'), url('../fonts/HelveticaNeueLTStdMd.svg#HelveticaNeueLTStdMd') format('svg');
+	
+}
+@font-face {
+	font-family: 'custom-fonts';
+	src: url('../fonts/custom-fonts.eot?83549');
+	src: url('../fonts/custom-fonts.eot?83549#iefix') format('embedded-opentype'),
+	url('../fonts/custom-fonts.woff2?83549') format('woff2'),
+	url('../fonts/custom-fonts.woff?83549') format('woff'),
+	url('../fonts/custom-fonts.ttf?83549') format('truetype'),
+	url('../fonts/custom-fonts.svg?83549#custom-fonts') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
